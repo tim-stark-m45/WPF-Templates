@@ -1,0 +1,119 @@
+﻿<Window x:Class="WpfApp_Template_.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp_Template_"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="400" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <ControlTemplate x:Key="btnTemplate" TargetType="Button">
+            <Border Name="btnBorder"
+                    Height="{Binding Height}"
+                    Background="LightBlue" 
+                    CornerRadius="10"
+                    BorderBrush="DarkBlue"
+                    BorderThickness="2">
+                <TextBlock FontSize="{TemplateBinding FontSize}" 
+                       Foreground="DarkBlue"
+                       Text="{TemplateBinding Content}"
+                       TextAlignment="Center"
+                       VerticalAlignment="Center">
+                </TextBlock>
+            </Border>
+
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter TargetName="btnBorder" Property="Background" Value="LightGreen"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="true">
+                    <Setter TargetName="btnBorder" Property="Background" Value="LightGray"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <!--<ControlTemplate x:Key="chkTemplate" TargetType="CheckBox">
+            <Border Width="70" 
+                    Height="80"
+                    CornerRadius="20"
+                    Name="chkBorder"
+                    Background="{TemplateBinding Background}">
+                <TextBlock FontSize="{TemplateBinding FontSize}" 
+                       Foreground="{TemplateBinding Foreground}"
+                       Text="{TemplateBinding Content}"
+                       VerticalAlignment="Center"
+                       TextAlignment="Center">
+                </TextBlock>
+                
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsChecked" Value="true">
+                    <Setter TargetName="chkBorder" Property="Background" Value="Orange"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>-->
+
+        <ControlTemplate x:Key="chkTemplate2" TargetType="CheckBox">
+            <StackPanel Orientation="Horizontal">
+                <Border
+                    Name="chkBorder"
+                    BorderBrush="Brown"
+                    BorderThickness="2"
+                    CornerRadius="100"
+                    Margin="0,0,10,0">
+                    <TextBlock 
+                        Name="chkIcon"
+                        Foreground="CadetBlue"
+                        Text="✖"/>
+                </Border>
+                <TextBlock FontSize="{TemplateBinding FontSize}" 
+                       Foreground="{TemplateBinding Foreground}"
+                       Text="{TemplateBinding Content}"
+                       VerticalAlignment="Center"
+                       TextAlignment="Center">
+                </TextBlock>
+            </StackPanel>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsChecked" Value="true">
+                    <Setter TargetName="chkBorder" Property="BorderBrush" Value="Red"/>
+                    <Setter TargetName="chkIcon" Property="Foreground" Value="Orange"/>
+                    <Setter TargetName="chkIcon" Property="Text" Value="✔"/>
+                </Trigger>
+
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter TargetName="chkIcon" Property="Text" Value="⭕"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <DataTemplate x:Key="lbItem">
+            <DockPanel LastChildFill="False">
+                <Label DockPanel.Dock="Left" Content="{Binding Name}"/>
+                <Label Name="lbPrice" DockPanel.Dock="Right" Content="{Binding Price}"/>
+            </DockPanel>
+            <DataTemplate.Triggers>
+                <DataTrigger Binding="{Binding IsDiscounted}" Value="true">
+                    <Setter TargetName="lbPrice" Property="Foreground" Value="Orange"/>
+                </DataTrigger>
+            </DataTemplate.Triggers>
+        </DataTemplate>
+        
+    </Window.Resources>
+    <StackPanel>
+        <Button Height="50" FontSize="30" Template="{StaticResource btnTemplate}">Hello!</Button>
+        <CheckBox Background="AntiqueWhite"
+                  Foreground="Black"
+                  FontSize="30"
+                  IsChecked="True"
+                  Template="{StaticResource chkTemplate2}" 
+                  Content="Test">
+        </CheckBox>
+        <ListBox 
+                 FontSize="20"
+                 HorizontalContentAlignment="Stretch"
+                 ItemsSource="{Binding Products}" 
+                 ItemTemplate="{StaticResource lbItem}"
+                 >
+        </ListBox>
+    </StackPanel>
+</Window>

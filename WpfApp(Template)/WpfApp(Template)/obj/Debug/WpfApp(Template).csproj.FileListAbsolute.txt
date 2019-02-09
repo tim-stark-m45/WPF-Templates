@@ -1,0 +1,15 @@
+C:\Users\AgaX_mn94\source\repos\WpfApp(Template)\WpfApp(Template)\bin\Debug\WpfApp(Template).exe.config
+C:\Users\AgaX_mn94\source\repos\WpfApp(Template)\WpfApp(Template)\bin\Debug\WpfApp(Template).exe
+C:\Users\AgaX_mn94\source\repos\WpfApp(Template)\WpfApp(Template)\bin\Debug\WpfApp(Template).pdb
+C:\Users\AgaX_mn94\source\repos\WpfApp(Template)\WpfApp(Template)\obj\Debug\WpfApp(Template).csprojAssemblyReference.cache
+C:\Users\AgaX_mn94\source\repos\WpfApp(Template)\WpfApp(Template)\obj\Debug\MainWindow.g.cs
+C:\Users\AgaX_mn94\source\repos\WpfApp(Template)\WpfApp(Template)\obj\Debug\App.g.cs
+C:\Users\AgaX_mn94\source\repos\WpfApp(Template)\WpfApp(Template)\obj\Debug\WpfApp(Template)_MarkupCompile.cache
+C:\Users\AgaX_mn94\source\repos\WpfApp(Template)\WpfApp(Template)\obj\Debug\WpfApp(Template)_MarkupCompile.lref
+C:\Users\AgaX_mn94\source\repos\WpfApp(Template)\WpfApp(Template)\obj\Debug\MainWindow.baml
+C:\Users\AgaX_mn94\source\repos\WpfApp(Template)\WpfApp(Template)\obj\Debug\WpfApp(Template).g.resources
+C:\Users\AgaX_mn94\source\repos\WpfApp(Template)\WpfApp(Template)\obj\Debug\WpfApp_Template_.Properties.Resources.resources
+C:\Users\AgaX_mn94\source\repos\WpfApp(Template)\WpfApp(Template)\obj\Debug\WpfApp(Template).csproj.GenerateResource.cache
+C:\Users\AgaX_mn94\source\repos\WpfApp(Template)\WpfApp(Template)\obj\Debug\WpfApp(Template).csproj.CoreCompileInputs.cache
+C:\Users\AgaX_mn94\source\repos\WpfApp(Template)\WpfApp(Template)\obj\Debug\WpfApp(Template).exe
+C:\Users\AgaX_mn94\source\repos\WpfApp(Template)\WpfApp(Template)\obj\Debug\WpfApp(Template).pdb
